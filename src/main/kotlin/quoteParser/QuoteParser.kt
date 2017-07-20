@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 JetBrains s.r.o.
+ * Copyright 2016-2017 JetBrains s.r.o., 2017 Pavel Zhuk
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -73,8 +73,6 @@ private fun isQuoteMarksAroundHeaderLines(startHeaderLinesIndex: Int,
  * To instantiate this class use [QuoteParser.Builder].      
  * Typical usage: create **QuoteParser** instance with [builder][QuoteParser.Builder]
  * and call its [parse()][QuoteParser.parse] method either with file or list of strings.
- * 
- * For now it works only with *text/plain* MIME type. 
  */
 class QuoteParser private constructor(builder: Builder) {
 
@@ -205,9 +203,9 @@ class QuoteParser private constructor(builder: Builder) {
 
     /**
      * Parse the given file to separate a quote from the useful content.   
-     * Works only with *text/plain* MIME type.
+     * *text/html* MIME type is not supported.
      * 
-     * @param emlFile a file in the EML format
+     * @param emlFile a file in the EML format.
      * @return [Content] object
      * @throws ParseException if the email does not contain text/plain part
      */
@@ -219,8 +217,7 @@ class QuoteParser private constructor(builder: Builder) {
 
     /**
      * Parse given list of strings to separate a quote from the useful content.
-     * Works only with *text/plain* MIME type.
-     * 
+     *
      * *hasInReplyToEMLHeader* defines if email contains *In-Reply-To* header 
      * or *References* header. If set to true then weakened criteria are used.
      *
@@ -340,7 +337,7 @@ class QuoteParser private constructor(builder: Builder) {
             var i = startHeaderLinesIndex
             while (i > 0 && matchingLines[i - 1] != QuoteMarkMatchingResult.NOT_EMPTY)
                 --i
-            if (i == 0 || matchingLines.subList(i, this.lines.size).any() { it.hasQuoteMark() }) {
+            if (i == 0 || matchingLines.subList(i, this.lines.size).any { it.hasQuoteMark() }) {
                 val msg = "Relation = ${Relation.QUOTE_MARK_FIRST}. Found quoteMark(>), but in the lines after ${i - 1} must not be any quote mark!"
                 throw IllegalStateException(msg)
             }

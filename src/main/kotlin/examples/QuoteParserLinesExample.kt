@@ -1,5 +1,5 @@
 /*
- * Copyright 2016-2017 JetBrains s.r.o.
+ * Copyright 2016-2017 JetBrains s.r.o., 2017 Pavel Zhuk
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ private val incorrectFileMsg = "Given file is not exists."
 private val noFilePathMsg = "There isn't any path to target file. Try again and input path as a first command-line argument."
 
 // This is an example of usage QuoteParser with list of strings.
-// You can specify if the supposed eml file contain In-Reply-To or
+// You can specify if the supposed eml file contains In-Reply-To or
 // References header through the call of the quoteParserObj.parse(lines, hasInReplyTo).
 // It has true default value which means that quotation criteria are weakened.
 //

@@ -69,7 +69,7 @@ dokka {
     sourceDirs = files('src/main/kotlin/quoteParser')
     linkMapping {
         dir = "src/main/kotlin"
-        url = "https://github.com/JetBrains/email-parser/tree/master/src/main/kotlin"
+        url = "https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin"
         suffix = "#L"
     }
 }
