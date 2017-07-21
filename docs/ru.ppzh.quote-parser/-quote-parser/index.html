@@ -1,0 +1,45 @@
+<HTML>
+<HEAD>
+<title>QuoteParser - email-parser</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">email-parser</a>&nbsp;/&nbsp;<a href="../index.html">ru.ppzh.quoteParser</a>&nbsp;/&nbsp;<a href=".">QuoteParser</a><br/>
+<br/>
+<h1>QuoteParser</h1>
+<code><span class="keyword">class </span><span class="identifier">QuoteParser</span></code> <a href="https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin/ru/ppzh/quoteParser/QuoteParser.kt#L77">(source)</a>
+<p>A parser to separate a quote from useful email content.</p>
+<p>To instantiate this class use <a href="-builder/index.html">QuoteParser.Builder</a>.
+Typical usage: create <strong>QuoteParser</strong> instance with <a href="-builder/index.html">builder</a>
+and call its <a href="parse.html">parse()</a> method either with file or list of strings.</p>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-builder/index.html">Builder</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">Builder</span></code>
+<p>Builder for QuoteParser class.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="parse.html">parse</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser$parse(java.io.File)/emlFile">emlFile</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-content/index.html"><span class="identifier">Content</span></a></code>
+<p>Parse the given file to separate a quote from the useful content.
+<emph>text/html</emph> MIME type is not supported.</p>
+<code><span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser$parse(kotlin.collections.List((kotlin.String)), kotlin.Boolean)/lines">lines</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser$parse(kotlin.collections.List((kotlin.String)), kotlin.Boolean)/hasInReplyToEMLHeader">hasInReplyToEMLHeader</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="../-content/index.html"><span class="identifier">Content</span></a></code>
+<p>Parse given list of strings to separate a quote from the useful content.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

@@ -58,7 +58,7 @@ val content = QuoteParser.Builder()
         }.parse(email.lines())
 ```
 
-Usage example (Java):
+Usage examples (Java):
 ```java
 Content c = new QuoteParser.Builder()
         .build()

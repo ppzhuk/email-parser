@@ -1,0 +1,109 @@
+<HTML>
+<HEAD>
+<title>QuoteParser.Builder - email-parser</title>
+<link rel="stylesheet" href="..\..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../../index.html">email-parser</a>&nbsp;/&nbsp;<a href="../../index.html">ru.ppzh.quoteParser</a>&nbsp;/&nbsp;<a href="../index.html">QuoteParser</a>&nbsp;/&nbsp;<a href=".">Builder</a><br/>
+<br/>
+<h1>Builder</h1>
+<code><span class="keyword">class </span><span class="identifier">Builder</span></code> <a href="https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin/ru/ppzh/quoteParser/QuoteParser.kt#L94">(source)</a>
+<p>Builder for <a href="../index.html">QuoteParser</a> class.</p>
+<p>All customizable parameters have the default value.
+In most cases you do not need to modify them.</p>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-init-.html">&lt;init&gt;</a></td>
+<td>
+<code><span class="identifier">Builder</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>Builder for <a href="../index.html">QuoteParser</a> class.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="build.html">build</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../index.html"><span class="identifier">QuoteParser</span></a></code><br/>
+<code><span class="keyword">fun </span><span class="identifier">build</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$build(kotlin.Function1((ru.ppzh.quoteParser.QuoteParser.Builder, kotlin.Unit)))/init">init</span><span class="symbol">:</span>&nbsp;<span class="identifier">Builder</span><span class="symbol">.</span><span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<span class="identifier">Unit</span><span class="symbol">)</span><span class="symbol">: </span><a href="../index.html"><span class="identifier">QuoteParser</span></a></code></td>
+</tr>
+<tr>
+<td>
+<a href="delete-quote-marks.html">deleteQuoteMarks</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">deleteQuoteMarks</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$deleteQuoteMarks(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>Specify whether quote marks (&gt;) should be deleted from the original
+email. Default = true.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="header-lines-count.html">headerLinesCount</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">headerLinesCount</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$headerLinesCount(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>Maximum number of lines going one after another to
+identify key features of the quote. Default = 3.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="key-phrases.html">keyPhrases</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">keyPhrases</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$keyPhrases(kotlin.collections.List((kotlin.String)))/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>User can specify list of regexes defining a quote beginning.
+If any of the regex from the list is matched then quote is defined.
+Default = <a href="../../../ru.ppzh.quote-parser.features/-key-phrases/default.html">KeyPhrases.default</a></p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="max-quote-blocks-count.html">maxQuoteBlocksCount</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">maxQuoteBlocksCount</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$maxQuoteBlocksCount(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>Maximum number of blocks marked with &gt; symbol.
+If this number is exceeded then all quote marks (&gt;)
+are ignored. Default = 3.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="minimum-quote-block-size.html">minimumQuoteBlockSize</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">minimumQuoteBlockSize</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$minimumQuoteBlockSize(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>Minimum number of lines going one after another with mark &gt; to
+identify quote block. If the real number is below than specified
+then in most cases it is not a real quote. Default = 7.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="multi-line-header-lines-count.html">multiLineHeaderLinesCount</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">multiLineHeaderLinesCount</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$multiLineHeaderLinesCount(kotlin.Int)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Int</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>Maximum number of lines going one after another to
+check <a href="../../../ru.ppzh.quote-parser.features/-middle-colon-feature/index.html">MiddleColonFeature</a>. Used in multiline
+headers of the quote. Default = 6.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="recursive.html">recursive</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">recursive</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser.Builder$recursive(kotlin.Boolean)/value">value</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Builder</span></code>
+<p>Specify whether to analyze the nested citations.
+If set true then <a href="#">deleteQuoteMarks</a> must also be true.
+It is impossible to parse nested citations without deleting &gt;.
+Default = false.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

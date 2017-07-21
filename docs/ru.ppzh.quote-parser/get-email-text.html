@@ -1,0 +1,42 @@
+<HTML>
+<HEAD>
+<title>getEmailText - email-parser</title>
+<link rel="stylesheet" href="..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">email-parser</a>&nbsp;/&nbsp;<a href="index.html">ru.ppzh.quoteParser</a>&nbsp;/&nbsp;<a href=".">getEmailText</a><br/>
+<br/>
+<h1>getEmailText</h1>
+
+<p><a name="ru.ppzh.quoteParser$getEmailText(java.io.File)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getEmailText</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser$getEmailText(java.io.File)/emlFile">emlFile</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code> <a href="https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin/ru/ppzh/quoteParser/parse.kt#L61">(source)</a>
+<p>Construct MimeMessage and then get the content of the text/plain part
+of this message. So if you already have MimeMessage object it is better
+to call <strong>getEmailText(MimePart)</strong> function in order to avoid additional
+costs.</p>
+<h3>Parameters</h3>
+
+<p><a name="emlFile"></a>
+<code>emlFile</code> - 
+<h3>Exceptions</h3>
+
+<p><a name="ParseException"></a>
+<code>ParseException</code> - if message does not contain text/plain part
+<p><strong>Return</strong><br/>
+plain text content of the message as a string</p>
+
+<p><a name="ru.ppzh.quoteParser$getEmailText(javax.mail.internet.MimePart)"></a>
+<code><span class="keyword">fun </span><span class="identifier">getEmailText</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser$getEmailText(javax.mail.internet.MimePart)/part">part</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/mail/internet/MimePart.html"><span class="identifier">MimePart</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code> <a href="https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin/ru/ppzh/quoteParser/parse.kt#L72">(source)</a>
+<p>Get the content of the text/plain part of the message.</p>
+<h3>Parameters</h3>
+
+<p><a name="part"></a>
+<code>part</code> - MimePart to get plain text from.
+<h3>Exceptions</h3>
+
+<p><a name="ParseException"></a>
+<code>ParseException</code> - if message does not contain text/plain part
+<p><strong>Return</strong><br/>
+plain text content of the message as a string</p>
+</BODY>
+</HTML>

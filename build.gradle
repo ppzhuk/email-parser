@@ -73,7 +73,7 @@ task runProcessing(type: JavaExec) {
 dokka {
     outputDirectory = "$buildDir/dokka"
     includes = ['module.md']
-    sourceDirs = files('src/main/kotlin/quoteParser')
+    sourceDirs = files('src/main/kotlin/ru/ppzh/quoteParser')
     linkMapping {
         dir = "src/main/kotlin"
         url = "https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin"
@@ -85,7 +85,7 @@ task dokkaJavadoc(type: org.jetbrains.dokka.gradle.DokkaTask) {
     outputFormat = 'javadoc'
     outputDirectory = "$buildDir/javadoc"
     includes = ['module.md']
-    sourceDirs = files('src/main/kotlin/quoteParser')
+    sourceDirs = files('src/main/kotlin/ru/ppzh/quoteParser')
 }
 
 task javadocJar(type: Jar) {

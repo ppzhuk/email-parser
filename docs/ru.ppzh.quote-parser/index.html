@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+<title>ru.ppzh.quoteParser - email-parser</title>
+<link rel="stylesheet" href="..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">email-parser</a>&nbsp;/&nbsp;<a href=".">ru.ppzh.quoteParser</a><br/>
+<br/>
+<h2>Package ru.ppzh.quoteParser</h2>
+<h3>Types</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="-content/index.html">Content</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">Content</span></code>
+<p>Email message with separate body, header of the quote
+and citation itself.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-quote-header/index.html">QuoteHeader</a></td>
+<td>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">QuoteHeader</span></code>
+<p>Represent header of the quote.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="-quote-parser/index.html">QuoteParser</a></td>
+<td>
+<code><span class="keyword">class </span><span class="identifier">QuoteParser</span></code>
+<p>A parser to separate a quote from useful email content.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<a href="contain-in-reply-to-header.html">containInReplyToHeader</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">containInReplyToHeader</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser$containInReplyToHeader(javax.mail.internet.MimeMessage)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/mail/internet/MimeMessage.html"><span class="identifier">MimeMessage</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Boolean</span></code>
+<p>Check weather given message contains <emph>In-Reply-To</emph> header or
+<emph>References</emph> header.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-email-text.html">getEmailText</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getEmailText</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser$getEmailText(java.io.File)/emlFile">emlFile</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Construct MimeMessage and then get the content of the text/plain part
+of this message. So if you already have MimeMessage object it is better
+to call <strong>getEmailText(MimePart)</strong> function in order to avoid additional
+costs.</p>
+<code><span class="keyword">fun </span><span class="identifier">getEmailText</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser$getEmailText(javax.mail.internet.MimePart)/part">part</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/javax/mail/internet/MimePart.html"><span class="identifier">MimePart</span></a><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">String</span></code>
+<p>Get the content of the text/plain part of the message.</p>
+</td>
+</tr>
+<tr>
+<td>
+<a href="get-mime-message.html">getMimeMessage</a></td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getMimeMessage</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser$getMimeMessage(java.io.File)/emlFile">emlFile</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="http://docs.oracle.com/javase/6/docs/api/javax/mail/internet/MimeMessage.html"><span class="identifier">MimeMessage</span></a></code>
+<p>Construct <emph>MimeMessage</emph> from File object</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

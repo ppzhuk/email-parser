@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+<title>QuoteParser.parse - email-parser</title>
+<link rel="stylesheet" href="..\..\..\style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">email-parser</a>&nbsp;/&nbsp;<a href="../index.html">ru.ppzh.quoteParser</a>&nbsp;/&nbsp;<a href="index.html">QuoteParser</a>&nbsp;/&nbsp;<a href=".">parse</a><br/>
+<br/>
+<h1>parse</h1>
+
+<p><a name="ru.ppzh.quoteParser.QuoteParser$parse(java.io.File)"></a>
+<code><span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser$parse(java.io.File)/emlFile">emlFile</span><span class="symbol">:</span>&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/java/io/File.html"><span class="identifier">File</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-content/index.html"><span class="identifier">Content</span></a></code> <a href="https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin/ru/ppzh/quoteParser/QuoteParser.kt#L212">(source)</a>
+<p>Parse the given file to separate a quote from the useful content.
+<emph>text/html</emph> MIME type is not supported.</p>
+<h3>Parameters</h3>
+
+<p><a name="emlFile"></a>
+<code>emlFile</code> - a file in the EML format.
+<h3>Exceptions</h3>
+
+<p><a name="ParseException"></a>
+<code>ParseException</code> - if the email does not contain text/plain part
+<p><strong>Return</strong><br/>
+<a href="../-content/index.html">Content</a> object</p>
+
+<p><a name="ru.ppzh.quoteParser.QuoteParser$parse(kotlin.collections.List((kotlin.String)), kotlin.Boolean)"></a>
+<code><span class="identifier">@JvmOverloads</span> <span class="keyword">fun </span><span class="identifier">parse</span><span class="symbol">(</span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser$parse(kotlin.collections.List((kotlin.String)), kotlin.Boolean)/lines">lines</span><span class="symbol">:</span>&nbsp;<span class="identifier">List</span><span class="symbol">&lt;</span><span class="identifier">String</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="ru.ppzh.quoteParser.QuoteParser$parse(kotlin.collections.List((kotlin.String)), kotlin.Boolean)/hasInReplyToEMLHeader">hasInReplyToEMLHeader</span><span class="symbol">:</span>&nbsp;<span class="identifier">Boolean</span>&nbsp;<span class="symbol">=</span>&nbsp;true<span class="symbol">)</span><span class="symbol">: </span><a href="../-content/index.html"><span class="identifier">Content</span></a></code> <a href="https://github.com/ppzhuk/email-parser/tree/master/src/main/kotlin/ru/ppzh/quoteParser/QuoteParser.kt#L229">(source)</a>
+<p>Parse given list of strings to separate a quote from the useful content.</p>
+<p><emph>hasInReplyToEMLHeader</emph> defines if email contains <emph>In-Reply-To</emph> header
+or <emph>References</emph> header. If set to true then weakened criteria are used.</p>
+<h3>Parameters</h3>
+
+<p><a name="lines"></a>
+<code>lines</code> - list of strings with email content. Strings must be represented as a plain text.
+<p><a name="hasInReplyToEMLHeader"></a>
+<code>hasInReplyToEMLHeader</code> - defines if email contains In-Reply-To header or References header. Default = true
+<p><strong>Return</strong><br/>
+<a href="../-content/index.html">Content</a> object</p>
+<p><strong>See Also</strong><br/>
+<p><a href="../contain-in-reply-to-header.html">containInReplyToHeader</a></p>
+</p>
+</BODY>
+</HTML>
