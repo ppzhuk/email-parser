@@ -30,6 +30,6 @@ hs_err_pid*
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
-/src/main/kotlin/executable/test*.kt
-!/src/main/kotlin/executable/testData.kt
+/src/main/kotlin/ru/ppzh/executable/test*.kt
+!/src/main/kotlin/ru/ppzh/executable/testData.kt
 /target/
