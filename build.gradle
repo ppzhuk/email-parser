@@ -23,7 +23,7 @@ apply plugin: 'org.jetbrains.dokka'
 apply plugin: 'maven'
 apply plugin: 'signing'
 
-mainClassName = 'examples.QuoteParserExampleKt'
+mainClassName = 'ru.ppzh.examples.QuoteParserExampleKt'
 
 group = "com.github.ppzhuk"
 archivesBaseName = "email-parser"
@@ -63,7 +63,7 @@ run {
 task runProcessing(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
-    main = 'examples.QuoteParserExampleKt'
+    main = 'ru.ppzh.examples.QuoteParserExampleKt'
 
     if (project.hasProperty('emlFile')) {
         args emlFile.split('\n')

@@ -18,9 +18,8 @@ Quotation is marked with '>' symbol beginning with the first line of the header 
 Working time is also provided.            
 
 ### Documentation
-To get documentation in [dokka](https://github.com/Kotlin/dokka) format enter `gradlew dokka` in the console. Then run `build/dokka/email-parser/index.html`
 
-To get documentation in Javadoc format enter `gradlew dokkaJavadoc` in the console. Then run `build/javadoc/index.html`
+You can find documentation [here](https://ppzhuk.github.io/email-parser/index.html).
 
 ### Description
 The main package of the library is [quoteParser](src/main/kotlin/ru/ppzh/quoteParser). Its main class is [QuoteParser](src/main/kotlin/ru/ppzh/quoteParser/QuoteParser.kt#L77). 
