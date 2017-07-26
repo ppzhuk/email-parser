@@ -4,18 +4,19 @@ This library provides ability to separate the quotation from the useful content 
 Efficiency estimation we have got during testing: **> 97.5 %** correctly processed emails.
 
 # Usage
-You can download library sources and add them into your project.
+Gradle:
+```
+compile group: 'com.github.ppzhuk', name: 'email-parser', version: '1.0.1'
+```
 
-### To run in the console
-Clone project via git and change directory to `email-parser`.
-
-### Process .eml file:
-Enter `gradlew runProcessing -PemlFile="path"` in the console, where `path` is path to eml file.
-
-**Output format**        
-Header of the quotation is in uppercase.         
-Quotation is marked with '>' symbol beginning with the first line of the header of the quotation till the end of the message.          
-Working time is also provided.            
+Maven:
+```
+<dependency>
+    <groupId>com.github.ppzhuk</groupId>
+    <artifactId>email-parser</artifactId>
+    <version>1.0.1</version>
+</dependency>
+```
 
 ### Documentation
 
